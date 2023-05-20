@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tamagotchi</title>
+  <style>
+    #container {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Tamagotchi</h1>
+    <button onclick="feed()">Alimentar</button>
+    <button onclick="play()">Jugar</button>
+    <button onclick="sleep()">Dormir</button>
+    <br><br>
+    <img id="pet" src="https://via.placeholder.com/150" alt="Tamagotchi">
+    <p id="status"></p>
+  </div>
+
+  <script>
+    var hunger = 0;
+    var happiness = 0;
+    var energy = 0;
+
+    function feed() {
+      hunger -= 10;
+      if (hunger < 0) hunger = 0;
+      updateStatus();
+    }
+
+    function play() {
+      happiness += 10;
+      if (happiness > 100) happiness = 100;
+      updateStatus();
+    }
+
+    function sleep() {
+      energy += 10;
+      if (energy > 100) energy = 100;
+      updateStatus();
+    }
+
+    function updateStatus() {
+      var pet = document.getElementById("pet");
+      var status = document.getElementById("status");
+
+      if (hunger >= 100 || happiness <= 0 || energy <= 0) {
+        pet.src = "https://via.placeholder.com/150?text=RIP";
+        status.innerHTML = "Tu Tamagotchi ha fallecido. :(";
+        disableButtons();
+      } else {
+        pet.src = "https://via.placeholder.com/150";
+        status.innerHTML = "Hambre: " + hunger + " | Felicidad: " + happiness + " | Energía: " + energy;
+      }
+    }
+
+    function disableButtons() {
+      var buttons = document.getElementsByTagName("button");
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].disabled = true;
+      }
+    }
+  </script>
+</body>
+</html>

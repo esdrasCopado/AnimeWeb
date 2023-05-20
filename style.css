@@ -5,8 +5,12 @@
     width: 100%;
     height: auto;
 }
+html{
+    font-family: open sans, sans-serif;
+}
 body{
     background-color: #d5d7d9;
+    font-size: 1rem;
     
 }
 .Header{
@@ -20,7 +24,7 @@ body{
 }
 .Header > .Mid .Logo{
     margin-bottom: 0;
-    padding: 15px;
+    padding: 15px 0;
 }
 .Container{
     max-width: 1170px;
@@ -38,3 +42,74 @@ body{
     margin: 0 auto;
     
 }
+.Ax[class*="Row"]{
+    display: flex;
+    flex-flow: row wrap;
+}
+@media (min-width:1020px){}
+.CX[class*="Row"]{
+    display: -webkit-flex;
+    flex-wrap:wrap;
+}
+.AFixed{
+    flex: none;
+    max-width: 100%;
+}
+.Ax.Row.Afluid >*{
+    -webkit-flex:4;
+    -ms-flex: 1;
+    flex: 1;
+}
+button, input, textarea,select,label,a{
+    transition: all .2s linear;
+}
+a{
+    background-color: transparent;
+    text-decoration: none;
+}
+.Header > .Mid .Container .AFixed .Menu li a{
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700px;
+    line-height: 50px;
+    
+    padding: 10px 15px;
+    
+}
+nav ul{
+    list-style-type: none ;
+}
+.Header .Mid .Menu li{
+    display: inline-block;
+}
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+span[class*="fa-"]{
+    display: inline-block;
+}
+header> .Mid .Loging{
+    padding: 15px 5px;
+    position: relative;
+    z-index: 99999999999;
+    display: flex;
+    align-items: center;
+}
+.Header> .Mid .Loging .Button{
+    border-radius: 5px;
+    background-color: #671b37;
+    width: 100%;
+    text-align: left;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-size: 15px;
+}
+.Button{
+    padding: 10px 15px;
+    color: #fff;
+}
+
