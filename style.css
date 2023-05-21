@@ -24,7 +24,7 @@ body{
 }
 .Header > .Mid .Logo{
     margin-bottom: 0;
-    padding: 15px 0;
+    padding-top: 10px;
 }
 .Container{
     max-width: 1170px;
@@ -71,7 +71,7 @@ a{
     display: block;
     color: white;
     text-transform: uppercase;
-    font-weight: 700px;
+    font-weight: 700;
     line-height: 50px;
     
     padding: 10px 15px;
@@ -113,3 +113,33 @@ header> .Mid .Loging{
     color: #fff;
 }
 
+.Header> .Mid .Search >form input{
+    background-color: rgba(0, 0, 0, .2);
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    margin-bottom: 0;
+    padding-right: 50px;
+    
+    
+}
+input, select{
+    height: 40px;
+    line-height: normal;
+}
+.Header> .Mid .Search >form input:focus{
+    outline: none;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+input, textarea, select, label, a{
+display: block;
+padding: 5px 15px;
+width: 100%;
+transition: all .2s linear;
+}
+.Search{
+    display: flex;
+    align-items: center;
+    
+}
